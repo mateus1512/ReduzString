@@ -57,7 +57,7 @@ namespace ReduzString
 
                 if (cadeia.Length == 1) break;
 
-                if (cadeia == "aa" || cadeia == "bb" || cadeia == "cc") break;
+                if (Iguais(cadeia)) break;
 
             } while (true);
 
@@ -66,6 +66,18 @@ namespace ReduzString
             Console.WriteLine(cadeia);
 
             Console.WriteLine(cadeia.Length);
+
+
+            bool Iguais(string cadeia)
+            {
+                char comparar = cadeia[0];
+                foreach (var item in cadeia)
+                {
+                    if (comparar != item) return false;
+                }
+                return true;
+            }
         }
+
     }
 }
